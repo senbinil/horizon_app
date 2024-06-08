@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HorizonApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Horizon</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="wrapper">
+      <div id="top-nav">
+        <div id="logo">
+          <h1>Horizon</h1>
+        </div>
+      </div>
+      <div id="container">
+        <div id="main-nav">
+          <ul id="nav-menu">
+            <li class="border"><%= link_to 'Products', root_path, class:"nav-link" %></li>
+            <li class="border"><%= link_to 'Add Products', new_product_path, class:'nav-link' %></li>
+          </ul>
+        </div>
+        <div id="page-contents" class="p-5">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
