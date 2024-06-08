@@ -55,6 +55,7 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
+  gem 'pry', '~> 0.14.2'
   gem 'rubocop-rails', require: false
 end
 
@@ -77,3 +78,16 @@ end
 
 # use bootstrap for styling
 gem 'bootstrap', '~> 5.3.3'
+
+# gems for handling both xlsx and csv file
+gem 'roo'
+gem 'roo-xls'
+# generate sample xlsx file
+gem 'caxlsx'
+gem 'caxlsx_rails'
+
+# Starting with Ruby 3.4.0, csv will no longer be part of stdlib
+gem 'csv'
+
+# Dummy data for sample xlsx file
+gem 'faker'
