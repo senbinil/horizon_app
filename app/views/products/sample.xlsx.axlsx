@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+
+# download.xlsx.axlsx
+wb = xlsx_package.workbook
+wb.add_worksheet do |sheet|
+  sheet.add_row Product::ALLOWED_FIELDS.values
+  @products.each do |row|
+    sheet.add_row row
+  end
+end

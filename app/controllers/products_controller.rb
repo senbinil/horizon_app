@@ -16,6 +16,12 @@ class ProductsController < ApplicationController
     end
   end
 
+  # GET /products/sample: generate sample file
+  def sample
+    @products = CreateSampleProductsService.perform
+    respond_to(&:xlsx)
+  end
+
   private
 
   def products_params

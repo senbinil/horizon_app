@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'products#index'
-  resources :products, only: %w[create index new]
+  resources :products, only: %w[create index new] do
+    get :sample, on: :collection
+  end
 end

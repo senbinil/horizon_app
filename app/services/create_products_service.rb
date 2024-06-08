@@ -20,7 +20,7 @@ class CreateProductsService < ApplicationService
     return [@products, 'File is blank'] if @products.blank?
 
     [@products, '']
-  rescue Roo::HeaderRowNotFoundError #input file does not match with Product schema
+  rescue Roo::HeaderRowNotFoundError # input file does not match with Product schema
     [@products, 'Invalid file format']
   end
 

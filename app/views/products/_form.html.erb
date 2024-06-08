@@ -4,7 +4,7 @@
     class="p-3 my-3 rounded-4 border d-flex justify-content-between align-items-center"
   >
     <p class="m-0">Sample template</p>
-    <%= link_to 'Download', root_path, class: "btn btn-danger rounded" %>
+    <%= link_to 'Download', sample_products_path(format: :xlsx), class: "btn btn-danger rounded" %>
   </div>
   <div class="form border p-5 rounded-4">
     <%= form_with(model: Product.new) do |f| %>
