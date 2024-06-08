@@ -1,0 +1,7 @@
+input[type="file"]#products-input {
+  border: 2px solid #f0f4ff;
+}
+input[type="file"]#products-input::file-selector-button {
+  visibility: hidden;
+}
+

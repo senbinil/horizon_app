@@ -1,0 +1,9 @@
+<% if @errors.present? %>
+  <%= turbo_frame_tag dom_id(Product.new) do %>
+    <%= render 'form' %>
+  <% end %>
+<% else %>
+  <%= turbo_frame_tag dom_id(Product.new) do %>
+    <%= render 'shared/success' %>
+  <% end %>
+<% end %>

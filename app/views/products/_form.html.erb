@@ -1,0 +1,34 @@
+<%= turbo_frame_tag dom_id(Product.new) do %>
+  <%= render 'shared/flash' %>
+  <div
+    class="p-3 my-3 rounded-4 border d-flex justify-content-between align-items-center"
+  >
+    <p class="m-0">Sample template</p>
+    <%= link_to 'Download', root_path, class: "btn btn-danger rounded" %>
+  </div>
+  <div class="form border p-5 rounded-4">
+    <%= form_with(model: Product.new) do |f| %>
+    <div class="fs-6 mb-4">Upload Products through xlsx file</div>
+    <div class="row">
+      <div class="col-sm-12 col-lg-8">
+        <%= f.file_field :file, class: "w-100", id: "products-input", required: true, accept: accepted_files %>
+      </div>
+      <div class="col-sm-12 col-lg-4">
+        <button id="products-upload" type="button">Browse</button>
+      </div>
+    </div>
+    <div class="text-end">
+      <%= f.submit 'Upload', class:'btn border px-5 rounded-pill' %>
+    </div>
+    <% end %>
+  </div>
+<% end %>
+
+
+<script>
+  $(document).ready(function () {
+    $("button#products-upload").click(function () {
+      $('input[type="file"]#products-input').click();
+    });
+  });
+</script>
