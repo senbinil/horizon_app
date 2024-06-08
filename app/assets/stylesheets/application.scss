@@ -15,3 +15,64 @@
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
+html,
+body {
+  height: 100vh;
+  overflow: scroll;
+}
+
+
+#wrapper {
+  position: relative;
+}
+
+#top-nav {
+  background-color: #f0f4ff;
+  height: 100px;
+  z-index: 9999;
+}
+
+#container {
+  display: flex;
+  flex-flow: row;
+}
+
+#main-nav {
+  min-height: 100vh;
+  width: 200px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfc1c5;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#nav-menu {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-menu a {
+  display: block;
+  background-color: #f0f4ff;
+  text-decoration: none;
+  padding: 8px;
+}
+#page-contents {
+  flex-grow: 1;
+}
+
+#logo {
+  width: 200px;
+  letter-spacing: 5px;
+  height: 100%;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  flex-flow: column wrap;
+  justify-content: center;
+}
