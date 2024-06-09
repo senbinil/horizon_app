@@ -5,3 +5,29 @@ input[type="file"]#products-input::file-selector-button {
   visibility: hidden;
 }
 
+.page-item:first-child .page-link {
+  border-top-left-radius: 24px !important;
+  border-bottom-left-radius: 24px !important;
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 24px !important;
+  border-bottom-right-radius: 24px !important;
+}
+
+#category-filter {
+  border-radius: 12px;
+  padding: 0px 20px;
+  text-transform: capitalize;
+}
+
+#name-filter {
+  border-radius: 12px;
+  padding-left: 35px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-position: 10px !important;
+  background: url("https://img.icons8.com/search") no-repeat;
+  background-size: 20px;
+}
+

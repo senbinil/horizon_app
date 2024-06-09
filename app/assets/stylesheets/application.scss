@@ -22,7 +22,6 @@ body {
   overflow: scroll;
 }
 
-
 #wrapper {
   position: relative;
 }
@@ -75,4 +74,13 @@ body {
   align-items: center;
   flex-flow: column wrap;
   justify-content: center;
+}
+
+.active-link {
+  background: #212529 !important;
+  color: wheat;
+}
+
+a.active-link:hover {
+  color: wheat;
 }
