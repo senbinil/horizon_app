@@ -92,3 +92,9 @@ gem 'csv'
 
 # Dummy data for sample xlsx file
 gem 'faker'
+
+# enable search in postgres database
+gem 'pg_search'
+
+# records pagination
+gem 'pagy'

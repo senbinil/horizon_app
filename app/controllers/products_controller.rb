@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 class ProductsController < ApplicationController
-  def index; end
+  def index
+    @pagy, @products = pagy(ProductQuery.query(Product.all, params))
+  end
 
   def new
     flash[:error] = nil

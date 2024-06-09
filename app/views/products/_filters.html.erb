@@ -1,0 +1,10 @@
+<%= form_with url: root_path, method: :get, data: { 'product-target': 'form'} do |f| %>
+  <div id="filters" class="p-2 border d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2">
+      <div>Filter by</div>
+      <%= f.select :category, options_for_select(Product.categories, params[:category]),
+          { include_blank: 'None'}, id:'category-filter', data: { action: "change->product#submitHandler" }, selected: params[:category] %>
+    </div>
+    <%= f.search_field :name, id: 'name-filter', placeholder: 'Search', value: params[:name], data: { action: "change->product#submitHandler" } %>
+  </div>
+<% end %>

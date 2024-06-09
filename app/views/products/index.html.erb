@@ -1,0 +1,47 @@
+<div class="d-flex flex-column gap-3" data-controller="product">
+  <div class="d-flex justify-content-between align-items-center">
+    <h3>Products</h3>
+    <%= link_to 'Add Products', new_product_path, class: 'btn border rounded-pill px-3' %>
+  </div>
+
+  <div class="products">
+    <%= render 'filters' %>
+    <table class="table table-bordered border-dark table-responsive">
+      <thead>
+        <tr>
+          <th class="bg-dark text-white">SI No.</th>
+          <th class="bg-dark text-white">Product Name</th>
+          <th class="bg-dark text-white">Code</th>
+          <th class="bg-dark text-white">Category</th>
+          <th class="bg-dark text-white">Price</th>
+          <th class="bg-dark text-white">Status</th>
+          <th class="bg-dark text-white">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= product.name %></td>
+          <td><%= product.code %></td>
+          <td><%= product.category %></td>
+          <td><%= product.price %></td>
+          <td><%= product&.status&.gsub('_', ' ') || 'out of stock' %></td>
+          <td>
+            <button class="btn btn-light btn-sm">View</button>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <% if @products.empty? %>
+    <div>
+      <p class="p-3 text-center fw-bold">No products found!</p>
+    </div>
+    <% end %>
+  </div>
+  <!-- pagination -->
+  <div class="d-flex justify-content-end">
+    <%== pagy_bootstrap_nav(@pagy) if @pagy.pages > 1 %>
+  </div>
+</div>
