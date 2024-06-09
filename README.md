@@ -15,7 +15,9 @@ interfaces:
 ## Screenshots
 
 ![Products Table](https://drive.google.com/uc?id=1mHzPN2teu45Kc2UG3vC1z2jOWyX4yCC4)
-
+![Add Products](https://drive.google.com/uc?id=1IBam7hH3CDvnoE77gQncnIF_9WgFatHp)
+![Add Products Success](https://drive.google.com/uc?id=1CIWsC8t9CZyOC5xyW60lGdk7zhQ9q5RW)
+![Sample template preview](https://drive.google.com/uc?id=1nVodywgREQXaMU2SukQqqDo63S-0ZE_b)
 
 ## Framework
 
