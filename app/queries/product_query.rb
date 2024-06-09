@@ -9,19 +9,17 @@ class ProductQuery < ApplicationQuery
 
   def resolve
     @records = by_category if @params[:category].present?
-    @records = by_search if @params[:name].present?
+    @records = by_name if @params[:name].present?
     @records
   end
 
   private
 
   def by_category
-    @records = Product.where(category: @params[:category])
-    @records
+    @records = @records.where(category: @params[:category])
   end
 
-  def by_search
-    @records = Product.search(@params[:name])
-    @records
+  def by_name
+    @records = @records.search(@params[:name])
   end
 end
