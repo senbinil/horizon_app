@@ -22,7 +22,7 @@ interfaces:
 ## Framework
 
 - Rails: 7.1.3
-- Ruby: 3.3.0
+- Ruby: 3.3.2
 - Database: PostgreSQL 16
 
 #### Note: This application use turbo-rails(mainly turbo_frame) and Stimulus for handling javascript.
@@ -51,7 +51,7 @@ This application is deployed using [Render](https://render.com) free tier.
 
 Check Ruby Version:
 
-- First, ensure you have Ruby 3.3.0 installed on your system. You can use a version manager like RVM or rbenv to manage multiple Ruby versions.
+- First, ensure you have Ruby 3.3.2 installed on your system. You can use a version manager like RVM or rbenv to manage multiple Ruby versions.
 
 Install Rails:
 
