@@ -8,12 +8,12 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  username: <%= Rails.application.credentials[Rails.env][:db_user] %>
+  password: <%= Rails.application.credentials[Rails.env][:db_password] %>
 
 development:
   <<: *default
   database: horizon_development
-  username: <%= Rails.application.credentials[Rails.env][:db_user] %>
-  password:  <%= Rails.application.credentials[Rails.env][:db_password] %>
 
 test:
   <<: *default
@@ -22,6 +22,4 @@ test:
 production:
   <<: *default
   database: horizon_productiion
-  username: <%= Rails.application.credentials[Rails.env][:db_user] %>
-  password:  <%= Rails.application.credentials[Rails.env][:db_password] %>
   url: <%= Rails.application.credentials[Rails.env][:db_url] %>
