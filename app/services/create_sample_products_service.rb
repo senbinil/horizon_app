@@ -2,7 +2,7 @@
 
 # generate dummy products for sample xlsx file
 class CreateSampleProductsService < ApplicationService
-  def initialize(row = 50)
+  def initialize(row = 10)
     @row = row
     @products = []
   end
