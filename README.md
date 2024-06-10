@@ -78,7 +78,16 @@ Install Dependencies:
 ```
 
 Database Setup:
-
+- Update your rails credentials using:
+```bash
+EDITOR = '<your-text-editor> --wait' rails credentials:edit'
+```
+- Add the following values:
+```bash
+development:
+    db_user: username
+    db_password: password
+```
 - Run migrations to create the database schema:
 
 ```bash
